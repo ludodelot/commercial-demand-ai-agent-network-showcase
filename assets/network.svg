@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="network-title network-desc">
+  <title id="network-title">Synthetic commercial agent network</title>
+  <desc id="network-desc">Illustrative network with Amazon and Walmart retailer teams on the left, typed message exchange in the center, and Nikon, Canon, Sony, Leica, and Fujifilm supplier teams on the right. Snapshot status: 50 implemented roles out of 60 registered.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1224"/><stop offset="1" stop-color="#101d35"/></linearGradient>
+    <linearGradient id="hub" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#172a49"/><stop offset="1" stop-color="#13223b"/></linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4285ff" stop-opacity=".18"/><stop offset=".52" stop-color="#36d8ce" stop-opacity=".12"/><stop offset="1" stop-color="#f0a85d" stop-opacity=".12"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#020712" flood-opacity=".35"/></filter>
+    <marker id="arrow-blue" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7Z" fill="#6fa5ff"/></marker>
+    <marker id="arrow-teal" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7Z" fill="#4dd7ca"/></marker>
+    <marker id="arrow-amber" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7Z" fill="#f0b36d"/></marker>
+    <style>
+      text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;fill:#edf3ff}
+      .muted{fill:#98a9c5}.dim{fill:#6f83a4}.small{font-size:11px;letter-spacing:.04em}.label{font-size:12px;font-weight:600}.company{font-size:15px;font-weight:700;letter-spacing:.01em}.eyebrow{font-size:10px;font-weight:700;letter-spacing:.17em;fill:#94a8c8}
+      .card{fill:#101d34;stroke:#263958;stroke-width:1}.line{fill:none;stroke-width:1.5;stroke-linecap:round;opacity:.74}.robot-shell{fill:#162540;stroke:currentColor;stroke-width:1.5}.robot-face{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+    <g id="bot">
+      <path class="robot-shell" d="M7 12.5V10a8 8 0 0 1 16 0v2.5M4.5 13h21v10a4 4 0 0 1-4 4h-13a4 4 0 0 1-4-4z"/>
+      <path class="robot-face" d="M11 19v.1m10-.1v.1M12.5 23h5M15 2v3M15 2h4"/>
+      <circle cx="7" cy="18" r="1" fill="currentColor"/><circle cx="23" cy="18" r="1" fill="currentColor"/>
+    </g>
+  </defs>
+  <rect width="1200" height="650" rx="28" fill="url(#bg)"/>
+  <circle cx="604" cy="330" r="330" fill="url(#glow)"/>
+  <path d="M36 102H1164" stroke="#263753" stroke-width="1"/>
+
+  <text x="54" y="48" class="eyebrow">COMMERCIAL &amp; DEMAND AI AGENT NETWORK</text>
+  <text x="54" y="82" font-size="26" font-weight="720" letter-spacing="-.03em">A living network of commercial teams</text>
+  <g transform="translate(928 37)">
+    <rect width="218" height="34" rx="17" fill="#14243d" stroke="#2a4163"/>
+    <circle cx="17" cy="17" r="4" fill="#4dd7ca"/>
+    <text x="30" y="21" class="small" fill="#bfcee4">SYNTHETIC · ILLUSTRATIVE</text>
+  </g>
+
+  <text x="62" y="137" class="eyebrow">RETAILER TEAMS</text>
+  <text x="1112" y="137" class="eyebrow" text-anchor="end">SUPPLIER TEAMS</text>
+
+  <!-- Retailer cards -->
+  <g filter="url(#shadow)">
+    <rect class="card" x="54" y="157" width="224" height="164" rx="16"/>
+    <rect x="54" y="157" width="3" height="164" rx="2" fill="#48a7ff"/>
+    <rect class="card" x="54" y="344" width="224" height="164" rx="16"/>
+    <rect x="54" y="344" width="3" height="164" rx="2" fill="#f7b938"/>
+  </g>
+  <g style="color:#48a7ff" transform="translate(73 176)"><use href="#bot"/></g>
+  <text x="111" y="199" class="company">Amazon</text>
+  <text x="74" y="230" class="small muted">BUYER · 1P + MARKETPLACE</text>
+  <path d="M74 248H254" stroke="#263958"/>
+  <text x="74" y="274" class="label">Demand planning</text>
+  <text x="74" y="296" class="small dim">Forecast · assortment · allocation</text>
+
+  <g style="color:#f7b938" transform="translate(73 363)"><use href="#bot"/></g>
+  <text x="111" y="386" class="company">Walmart</text>
+  <text x="74" y="417" class="small muted">BUYER · STORES + ECOMMERCE</text>
+  <path d="M74 435H254" stroke="#263958"/>
+  <text x="74" y="461" class="label">Procurement</text>
+  <text x="74" y="483" class="small dim">CEDIS/DC before store allocation</text>
+
+  <!-- Supplier connectors: tapered tracks behind hub -->
+  <g opacity=".78">
+    <path class="line" d="M278 224 C350 224 368 245 442 256" stroke="#6fa5ff" marker-end="url(#arrow-blue)"/>
+    <path class="line" d="M278 272 C355 272 373 275 442 281" stroke="#4dd7ca" marker-end="url(#arrow-teal)"/>
+    <path class="line" d="M278 410 C352 410 370 390 442 381" stroke="#6fa5ff" marker-end="url(#arrow-blue)"/>
+    <path class="line" d="M278 457 C352 457 377 415 442 404" stroke="#4dd7ca" marker-end="url(#arrow-teal)"/>
+    <path class="line" d="M758 240 C828 240 849 201 922 201" stroke="#f0b36d" marker-end="url(#arrow-amber)"/>
+    <path class="line" d="M758 268 C831 268 854 273 922 273" stroke="#f0b36d" marker-end="url(#arrow-amber)"/>
+    <path class="line" d="M758 302 C831 302 854 345 922 345" stroke="#f0b36d" marker-end="url(#arrow-amber)"/>
+    <path class="line" d="M758 363 C831 363 854 417 922 417" stroke="#f0b36d" marker-end="url(#arrow-amber)"/>
+    <path class="line" d="M758 397 C831 397 854 489 922 489" stroke="#f0b36d" marker-end="url(#arrow-amber)"/>
+  </g>
+
+  <!-- Exchange hub -->
+  <g filter="url(#shadow)">
+    <rect x="442" y="157" width="316" height="351" rx="20" fill="url(#hub)" stroke="#344b6c"/>
+    <rect x="442" y="157" width="316" height="4" rx="2" fill="#4dd7ca"/>
+  </g>
+  <text x="468" y="190" class="eyebrow" fill="#4dd7ca">TYPED MESSAGE EXCHANGE</text>
+  <text x="468" y="218" font-size="18" font-weight="700">Decisions with clear boundaries</text>
+  <text x="468" y="239" class="small muted">Versioned, scoped, and replayable</text>
+
+  <g>
+    <rect x="468" y="258" width="264" height="35" rx="9" fill="#1b3151" stroke="#345274"/>
+    <circle cx="485" cy="275.5" r="4" fill="#6fa5ff"/>
+    <text x="499" y="280" class="label">Forecast + assortment</text>
+    <rect x="468" y="301" width="264" height="35" rx="9" fill="#1b3151" stroke="#345274"/>
+    <circle cx="485" cy="318.5" r="4" fill="#4dd7ca"/>
+    <text x="499" y="323" class="label">RFQ + supplier quote</text>
+    <rect x="468" y="344" width="264" height="35" rx="9" fill="#1b3151" stroke="#345274"/>
+    <circle cx="485" cy="361.5" r="4" fill="#f0b36d"/>
+    <text x="499" y="366" class="label">Availability + launch evidence</text>
+    <rect x="468" y="387" width="264" height="35" rx="9" fill="#1b3151" stroke="#345274"/>
+    <circle cx="485" cy="404.5" r="4" fill="#a78bfa"/>
+    <text x="499" y="409" class="label">Agreement + approval events</text>
+  </g>
+  <path d="M468 440H732" stroke="#314765"/>
+  <text x="468" y="463" class="small muted">Replay follows persisted events.</text>
+  <text x="468" y="482" class="small muted">Messages do not grant authority.</text>
+
+  <!-- Role snapshot -->
+  <g filter="url(#shadow)">
+    <rect x="54" y="537" width="1092" height="78" rx="16" fill="#101d34" stroke="#293d5c"/>
+  </g>
+  <text x="78" y="569" class="eyebrow">REGISTRY SNAPSHOT</text>
+  <text x="78" y="594" class="small muted">Role identities counted across the network</text>
+  <g transform="translate(484 553)">
+    <text x="0" y="25" font-size="22" font-weight="750" fill="#76a9ff">50</text>
+    <text x="34" y="23" class="label">implemented</text>
+    <text x="133" y="25" font-size="19" font-weight="600" fill="#7086a8">/</text>
+    <text x="153" y="25" font-size="22" font-weight="750" fill="#b7c5dc">60</text>
+    <text x="188" y="23" class="label">registered</text>
+    <rect x="0" y="39" width="260" height="6" rx="3" fill="#263958"/>
+    <rect x="0" y="39" width="216.7" height="6" rx="3" fill="#4f91ff"/>
+  </g>
+  <g transform="translate(832 561)">
+    <circle cx="5" cy="5" r="4" fill="#4dd7ca"/>
+    <text x="17" y="9" class="small muted">Executed behavior</text>
+    <circle cx="154" cy="5" r="4" fill="#687b9b"/>
+    <text x="166" y="9" class="small muted">Planned roles</text>
+  </g>
+
+  <!-- Supplier roster -->
+  <g filter="url(#shadow)">
+    <rect class="card" x="922" y="165" width="224" height="72" rx="14"/>
+    <rect class="card" x="922" y="237" width="224" height="72" rx="14"/>
+    <rect class="card" x="922" y="309" width="224" height="72" rx="14"/>
+    <rect class="card" x="922" y="381" width="224" height="72" rx="14"/>
+    <rect class="card" x="922" y="453" width="224" height="72" rx="14"/>
+  </g>
+  <g style="color:#f0b36d" transform="translate(936 187) scale(.72)"><use href="#bot"/></g>
+  <text x="974" y="195" class="company">Nikon</text><text x="974" y="216" class="small muted">SUPPLIER · DEMAND / ATP</text>
+  <g style="color:#ff785f" transform="translate(936 259) scale(.72)"><use href="#bot"/></g>
+  <text x="974" y="267" class="company">Canon</text><text x="974" y="288" class="small muted">SUPPLIER · QUOTE / LAUNCH</text>
+  <g style="color:#66a7ff" transform="translate(936 331) scale(.72)"><use href="#bot"/></g>
+  <text x="974" y="339" class="company">Sony</text><text x="974" y="360" class="small muted">SUPPLIER · DEMAND / ATP</text>
+  <g style="color:#e4d6b7" transform="translate(936 403) scale(.72)"><use href="#bot"/></g>
+  <text x="974" y="411" class="company">Leica</text><text x="974" y="432" class="small muted">SUPPLIER · QUOTE / LAUNCH</text>
+
+  <!-- Fujifilm fifth supplier, positioned as a compact footer roster row -->
+  <g>
+    <g style="color:#e65b55" transform="translate(936 475) scale(.72)"><use href="#bot"/></g>
+    <text x="974" y="483" class="company" font-size="14">Fujifilm</text>
+    <text x="974" y="504" class="small muted">SUPPLIER · DEMAND / ATP</text>
+  </g>
+
+  <text x="600" y="636" class="small dim" text-anchor="middle">Illustrative synthetic network · No live company systems or commercial data</text>
+</svg>

@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">A 1P commerce cycle</title>
+  <desc id="desc">A synthetic retail workflow: demand informs assortment, suppliers are compared against a joint budget, supplier ATP and existing terms shape the offer, buyer and supplier approvals authorize a purchase order, goods arrive at a distribution center, move separately to store shelves, and sell-out feeds the next demand plan. Wholesale price is fixed; mix and quantities are negotiated.</desc>
+  <defs>
+    <marker id="arrow-cobalt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9Z" fill="#7195FF"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9Z" fill="#53D6C2"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9Z" fill="#F4BD63"/></marker>
+    <style>
+      text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .eyebrow { fill:#88A5D6; font-size:12px; font-weight:700; letter-spacing:2.1px; }
+      .title { fill:#F4F7FF; font-size:31px; font-weight:700; letter-spacing:-.6px; }
+      .sub { fill:#AAB9D5; font-size:14px; }
+      .card { fill:#111F3C; stroke:#273A60; stroke-width:1.2; }
+      .cardTitle { fill:#F0F4FF; font-size:15px; font-weight:700; }
+      .body { fill:#AFBED8; font-size:12.5px; }
+      .small { fill:#8397BA; font-size:10.5px; }
+      .num { fill:#07152F; font-size:11px; font-weight:800; text-anchor:middle; dominant-baseline:central; }
+      .topLine { fill:none; stroke:#7195FF; stroke-width:2.4; marker-end:url(#arrow-cobalt); }
+      .bottomLine { fill:none; stroke:#53D6C2; stroke-width:2.4; marker-end:url(#arrow-teal); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="650" fill="#07152F"/>
+  <path d="M0 0H1200V94H0Z" fill="#0B1B38"/>
+  <path d="M36 93H1164" stroke="#203254" stroke-width="1"/>
+  <text x="40" y="30" class="eyebrow">COMMERCIAL OPERATING MODEL · SYNTHETIC 1P</text>
+  <text x="40" y="67" class="title">From demand signal to shelf-ready stock</text>
+  <text x="1160" y="47" text-anchor="end" class="sub">One connected retail cycle</text>
+
+  <!-- sequence labels -->
+  <text x="40" y="120" class="eyebrow">PLAN &amp; COMMIT</text>
+  <text x="1160" y="365" text-anchor="end" class="eyebrow">FULFILL &amp; LEARN · READ RIGHT TO LEFT</text>
+
+  <!-- top row arrows -->
+  <path class="topLine" d="M226 219H259"/>
+  <path class="topLine" d="M458 219H491"/>
+  <path class="topLine" d="M690 219H723"/>
+  <path class="topLine" d="M922 219H955"/>
+
+  <!-- 1 Demand -->
+  <g>
+    <rect x="38" y="143" width="188" height="153" rx="15" class="card"/>
+    <rect x="38" y="143" width="188" height="4" rx="2" fill="#53D6C2"/>
+    <circle cx="60" cy="169" r="12" fill="#53D6C2"/><text x="60" y="169" class="num">1</text>
+    <path d="M168 173v-12m8 12v-21m8 21v-8" stroke="#53D6C2" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="54" y="207" class="cardTitle">Demand signal</text>
+    <text x="54" y="230" class="body">Forecast + recent sell-out</text>
+    <text x="54" y="250" class="body">shape the buying need.</text>
+    <text x="54" y="277" class="small">BUYER PLANNING</text>
+  </g>
+
+  <!-- 2 Assortment -->
+  <g>
+    <rect x="270" y="143" width="188" height="153" rx="15" class="card"/>
+    <rect x="270" y="143" width="188" height="4" rx="2" fill="#53D6C2"/>
+    <circle cx="292" cy="169" r="12" fill="#53D6C2"/><text x="292" y="169" class="num">2</text>
+    <path d="M399 158h30v28h-30zM405 164h18M405 170h18M405 176h12" fill="none" stroke="#53D6C2" stroke-width="1.7" stroke-linecap="round"/>
+    <text x="286" y="207" class="cardTitle">Assortment</text>
+    <text x="286" y="230" class="body">Choose the range; weigh</text>
+    <text x="286" y="250" class="body">launches against evidence.</text>
+    <text x="286" y="277" class="small">MIX IS NEGOTIATED</text>
+  </g>
+
+  <!-- 3 Joint budget -->
+  <g>
+    <rect x="502" y="143" width="188" height="153" rx="15" class="card"/>
+    <rect x="502" y="143" width="188" height="4" rx="2" fill="#7195FF"/>
+    <circle cx="524" cy="169" r="12" fill="#7195FF"/><text x="524" y="169" class="num">3</text>
+    <circle cx="651" cy="170" r="14" fill="none" stroke="#7195FF" stroke-width="2"/><path d="M651 160v20M657 164c-1-3-11-3-11 1 0 5 11 2 11 7 0 4-10 5-12 1" fill="none" stroke="#7195FF" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="518" y="207" class="cardTitle">Joint budget</text>
+    <text x="518" y="230" class="body">Allocate across suppliers</text>
+    <text x="518" y="250" class="body">within one hard envelope.</text>
+    <text x="518" y="277" class="small">DETERMINISTIC FIT</text>
+  </g>
+
+  <!-- 4 ATP and terms -->
+  <g>
+    <rect x="734" y="143" width="188" height="153" rx="15" class="card"/>
+    <rect x="734" y="143" width="188" height="4" rx="2" fill="#7195FF"/>
+    <circle cx="756" cy="169" r="12" fill="#7195FF"/><text x="756" y="169" class="num">4</text>
+    <path d="M866 160h30v24h-30zM872 166h18M872 172h11M872 178h14" fill="none" stroke="#7195FF" stroke-width="1.7" stroke-linecap="round"/>
+    <text x="750" y="207" class="cardTitle">Supplier ATP + terms</text>
+    <text x="750" y="230" class="body">Check available stock and</text>
+    <text x="750" y="250" class="body">existing payment terms.</text>
+    <text x="750" y="277" class="small">PRICE LIST STAYS FIXED</text>
+  </g>
+
+  <!-- 5 Dual approvals -->
+  <g>
+    <rect x="966" y="143" width="196" height="153" rx="15" class="card"/>
+    <rect x="966" y="143" width="196" height="4" rx="2" fill="#F4BD63"/>
+    <circle cx="988" cy="169" r="12" fill="#F4BD63"/><text x="988" y="169" class="num">5</text>
+    <path d="M1095 160l10 4v8c0 7-5 11-10 14-6-3-10-7-10-14v-8z" fill="none" stroke="#F4BD63" stroke-width="1.8"/><path d="m1090 171 4 4 7-8" fill="none" stroke="#F4BD63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="982" y="207" class="cardTitle">Dual approvals</text>
+    <text x="982" y="230" class="body">Buyer approver + supplier</text>
+    <text x="982" y="250" class="body">KAM confirm the agreement.</text>
+    <text x="982" y="277" class="small">SIMULATED, PERSISTED</text>
+  </g>
+
+  <!-- turn to PO -->
+  <path d="M1064 296V337Q1064 348 1053 348H1033V397" fill="none" stroke="#F4BD63" stroke-width="2.4" marker-end="url(#arrow-amber)"/>
+  <rect x="1046" y="312" width="37" height="20" rx="10" fill="#392E24"/><text x="1064.5" y="326" text-anchor="middle" fill="#F4BD63" font-size="10" font-weight="700">GO</text>
+
+  <!-- bottom row links right to left -->
+  <path class="bottomLine" d="M931 478H894"/>
+  <path class="bottomLine" d="M661 478H624"/>
+  <path class="bottomLine" d="M391 478H354"/>
+
+  <!-- 6 PO -->
+  <g>
+    <rect x="931" y="398" width="220" height="157" rx="15" class="card"/>
+    <rect x="931" y="398" width="220" height="4" rx="2" fill="#F4BD63"/>
+    <circle cx="955" cy="424" r="12" fill="#F4BD63"/><text x="955" y="424" class="num">6</text>
+    <path d="M1092 413h30v31h-30zM1098 421h18M1098 427h18M1098 433h12" fill="none" stroke="#F4BD63" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="949" y="464" class="cardTitle">Purchase order</text>
+    <text x="949" y="488" class="body">Versioned quantities commit;</text>
+    <text x="949" y="508" class="body">supplier stock is reserved.</text>
+    <text x="949" y="536" class="small">RELEASED FOR SHIPMENT</text>
+  </g>
+
+  <!-- 7 DC receipt -->
+  <g>
+    <rect x="661" y="398" width="220" height="157" rx="15" class="card"/>
+    <rect x="661" y="398" width="220" height="4" rx="2" fill="#F4BD63"/>
+    <circle cx="685" cy="424" r="12" fill="#F4BD63"/><text x="685" y="424" class="num">7</text>
+    <path d="M810 418h40v24h-40zM806 418l24-13 24 13M817 442v-13h12v13M835 429h10v13h-10" fill="none" stroke="#F4BD63" stroke-width="1.6" stroke-linejoin="round"/>
+    <text x="679" y="464" class="cardTitle">DC receipt</text>
+    <text x="679" y="487" class="body">Procurement arrives at the</text>
+    <text x="679" y="507" class="body">distribution center first.</text>
+    <rect x="678" y="520" width="185" height="24" rx="7" fill="#382B22"/>
+    <text x="770.5" y="536" text-anchor="middle" fill="#FFD18A" font-size="10.5" font-weight="700">DC receipt ≠ store replenishment</text>
+  </g>
+
+  <!-- 8 POS transfer -->
+  <g>
+    <rect x="391" y="398" width="220" height="157" rx="15" class="card"/>
+    <rect x="391" y="398" width="220" height="4" rx="2" fill="#53D6C2"/>
+    <circle cx="415" cy="424" r="12" fill="#53D6C2"/><text x="415" y="424" class="num">8</text>
+    <path d="M544 418h35v24h-35zM550 413h23M552 424h19M552 430h12" fill="none" stroke="#53D6C2" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="409" y="464" class="cardTitle">POS transfer</text>
+    <text x="409" y="488" class="body">A separate allocation moves</text>
+    <text x="409" y="508" class="body">stock from DC to store.</text>
+    <text x="409" y="536" class="small">STORE STOCK UPDATES LATER</text>
+  </g>
+
+  <!-- 9 sell-out -->
+  <g>
+    <rect x="121" y="398" width="220" height="157" rx="15" class="card"/>
+    <rect x="121" y="398" width="220" height="4" rx="2" fill="#53D6C2"/>
+    <circle cx="145" cy="424" r="12" fill="#53D6C2"/><text x="145" y="424" class="num">9</text>
+    <path d="M276 440v-23m8 23v-14m8 14v-29m8 29v-9" stroke="#53D6C2" stroke-width="2" stroke-linecap="round"/>
+    <text x="139" y="464" class="cardTitle">Sell-out feedback</text>
+    <text x="139" y="488" class="body">Sales and stock signals return</text>
+    <text x="139" y="508" class="body">to the next demand plan.</text>
+    <text x="139" y="536" class="small">LEARNING LOOP</text>
+  </g>
+
+  <!-- feedback loop -->
+  <path d="M121 477H70Q48 477 48 455V335Q48 322 61 322H112Q126 322 126 308V299" fill="none" stroke="#53D6C2" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#arrow-teal)"/>
+  <rect x="34" y="353" width="93" height="25" rx="12" fill="#0E2B3E" stroke="#1F5B67"/>
+  <text x="80.5" y="369" text-anchor="middle" fill="#7DE3D4" font-size="10" font-weight="700" letter-spacing=".4">FEEDBACK</text>
+
+  <path d="M40 588H1160" stroke="#203254" stroke-width="1"/>
+  <circle cx="51" cy="615" r="4" fill="#7195FF"/>
+  <text x="64" y="619" class="sub">Wholesale price is fixed.</text>
+  <circle cx="262" cy="615" r="4" fill="#53D6C2"/>
+  <text x="275" y="619" class="sub">Assortment and quantities are negotiated.</text>
+  <text x="1160" y="619" text-anchor="end" class="small">SYNTHETIC SCENARIO · NO LIVE ORDERS</text>
+</svg>
