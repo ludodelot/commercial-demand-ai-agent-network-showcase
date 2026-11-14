@@ -13,6 +13,14 @@
       text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;fill:#edf3ff}
       .muted{fill:#98a9c5}.dim{fill:#6f83a4}.small{font-size:11px;letter-spacing:.04em}.label{font-size:12px;font-weight:600}.company{font-size:15px;font-weight:700;letter-spacing:.01em}.eyebrow{font-size:10px;font-weight:700;letter-spacing:.17em;fill:#94a8c8}
       .card{fill:#101d34;stroke:#263958;stroke-width:1}.line{fill:none;stroke-width:1.5;stroke-linecap:round;opacity:.74}.robot-shell{fill:#162540;stroke:currentColor;stroke-width:1.5}.robot-face{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+      .packet-path{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:1.5 98.5;stroke-dashoffset:100;opacity:.95;animation:packet-travel 10s linear infinite}
+      .packet-path:nth-of-type(2n){animation-duration:11s}.packet-path:nth-of-type(3n){animation-duration:9s}
+      .retail-packet{stroke:#9bbfff}.teal-packet{stroke:#71e5dc}.supplier-packet{stroke:#ffd09a}
+      .robot-activity{animation:bot-idle 5.8s ease-in-out infinite}
+      .robot-activity:nth-of-type(even){animation-delay:-2.9s}
+      @keyframes packet-travel{to{stroke-dashoffset:0}}
+      @keyframes bot-idle{0%,100%{translate:0 0}50%{translate:0 -1.5px}}
+      @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
     </style>
     <g id="bot">
       <path class="robot-shell" d="M7 12.5V10a8 8 0 0 1 16 0v2.5M4.5 13h21v10a4 4 0 0 1-4 4h-13a4 4 0 0 1-4-4z"/>
@@ -26,8 +34,8 @@
 
   <text x="54" y="48" class="eyebrow">COMMERCIAL &amp; DEMAND AI AGENT NETWORK</text>
   <text x="54" y="82" font-size="26" font-weight="720" letter-spacing="-.03em">A living network of commercial teams</text>
-  <g transform="translate(928 37)">
-    <rect width="218" height="34" rx="17" fill="#14243d" stroke="#2a4163"/>
+  <g transform="translate(896 37)">
+    <rect width="250" height="34" rx="17" fill="#14243d" stroke="#2a4163"/>
     <circle cx="17" cy="17" r="4" fill="#4dd7ca"/>
     <text x="30" y="21" class="small" fill="#bfcee4">SYNTHETIC · ILLUSTRATIVE</text>
   </g>
@@ -42,16 +50,16 @@
     <rect class="card" x="54" y="344" width="224" height="164" rx="16"/>
     <rect x="54" y="344" width="3" height="164" rx="2" fill="#f7b938"/>
   </g>
-  <g style="color:#48a7ff" transform="translate(73 176)"><use href="#bot"/></g>
+  <g class="robot-activity" style="color:#48a7ff" transform="translate(73 176)"><use href="#bot"/></g>
   <text x="111" y="199" class="company">Amazon</text>
-  <text x="74" y="230" class="small muted">BUYER · 1P + MARKETPLACE</text>
+  <text x="74" y="230" class="small muted">BUYER · 1P + 3P MARKETPLACE</text>
   <path d="M74 248H254" stroke="#263958"/>
   <text x="74" y="274" class="label">Demand planning</text>
   <text x="74" y="296" class="small dim">Forecast · assortment · allocation</text>
 
-  <g style="color:#f7b938" transform="translate(73 363)"><use href="#bot"/></g>
+  <g class="robot-activity" style="color:#f7b938" transform="translate(73 363)"><use href="#bot"/></g>
   <text x="111" y="386" class="company">Walmart</text>
-  <text x="74" y="417" class="small muted">BUYER · STORES + ECOMMERCE</text>
+  <text x="74" y="417" class="small muted">BUYER · 1P STORES + ECOMMERCE</text>
   <path d="M74 435H254" stroke="#263958"/>
   <text x="74" y="461" class="label">Procurement</text>
   <text x="74" y="483" class="small dim">CEDIS/DC before store allocation</text>
@@ -67,6 +75,19 @@
     <path class="line" d="M758 302 C831 302 854 345 922 345" stroke="#f0b36d" marker-end="url(#arrow-amber)"/>
     <path class="line" d="M758 363 C831 363 854 417 922 417" stroke="#f0b36d" marker-end="url(#arrow-amber)"/>
     <path class="line" d="M758 397 C831 397 854 489 922 489" stroke="#f0b36d" marker-end="url(#arrow-amber)"/>
+  </g>
+
+  <!-- Single moving packets travel along the quiet, persistent message routes. -->
+  <g aria-hidden="true">
+    <path class="packet-path retail-packet" pathLength="100" d="M278 224 C350 224 368 245 442 256" style="animation-delay:-1.4s"/>
+    <path class="packet-path teal-packet" pathLength="100" d="M278 272 C355 272 373 275 442 281" style="animation-delay:-6.2s"/>
+    <path class="packet-path retail-packet" pathLength="100" d="M278 410 C352 410 370 390 442 381" style="animation-delay:-3.7s"/>
+    <path class="packet-path teal-packet" pathLength="100" d="M278 457 C352 457 377 415 442 404" style="animation-delay:-8.3s"/>
+    <path class="packet-path supplier-packet" pathLength="100" d="M758 240 C828 240 849 201 922 201" style="animation-delay:-4.8s"/>
+    <path class="packet-path supplier-packet" pathLength="100" d="M758 268 C831 268 854 273 922 273" style="animation-delay:-.8s"/>
+    <path class="packet-path supplier-packet" pathLength="100" d="M758 302 C831 302 854 345 922 345" style="animation-delay:-7.4s"/>
+    <path class="packet-path supplier-packet" pathLength="100" d="M758 363 C831 363 854 417 922 417" style="animation-delay:-2.6s"/>
+    <path class="packet-path supplier-packet" pathLength="100" d="M758 397 C831 397 854 489 922 489" style="animation-delay:-9.1s"/>
   </g>
 
   <!-- Exchange hub -->
@@ -126,18 +147,18 @@
     <rect class="card" x="922" y="381" width="224" height="72" rx="14"/>
     <rect class="card" x="922" y="453" width="224" height="72" rx="14"/>
   </g>
-  <g style="color:#f0b36d" transform="translate(936 187) scale(.72)"><use href="#bot"/></g>
+  <g class="robot-activity" style="color:#f0b36d" transform="translate(936 187) scale(.72)"><use href="#bot"/></g>
   <text x="974" y="195" class="company">Nikon</text><text x="974" y="216" class="small muted">SUPPLIER · DEMAND / ATP</text>
-  <g style="color:#ff785f" transform="translate(936 259) scale(.72)"><use href="#bot"/></g>
+  <g class="robot-activity" style="color:#ff785f" transform="translate(936 259) scale(.72)"><use href="#bot"/></g>
   <text x="974" y="267" class="company">Canon</text><text x="974" y="288" class="small muted">SUPPLIER · QUOTE / LAUNCH</text>
-  <g style="color:#66a7ff" transform="translate(936 331) scale(.72)"><use href="#bot"/></g>
+  <g class="robot-activity" style="color:#66a7ff" transform="translate(936 331) scale(.72)"><use href="#bot"/></g>
   <text x="974" y="339" class="company">Sony</text><text x="974" y="360" class="small muted">SUPPLIER · DEMAND / ATP</text>
-  <g style="color:#e4d6b7" transform="translate(936 403) scale(.72)"><use href="#bot"/></g>
+  <g class="robot-activity" style="color:#e4d6b7" transform="translate(936 403) scale(.72)"><use href="#bot"/></g>
   <text x="974" y="411" class="company">Leica</text><text x="974" y="432" class="small muted">SUPPLIER · QUOTE / LAUNCH</text>
 
   <!-- Fujifilm fifth supplier, positioned as a compact footer roster row -->
   <g>
-    <g style="color:#e65b55" transform="translate(936 475) scale(.72)"><use href="#bot"/></g>
+    <g class="robot-activity" style="color:#e65b55" transform="translate(936 475) scale(.72)"><use href="#bot"/></g>
     <text x="974" y="483" class="company" font-size="14">Fujifilm</text>
     <text x="974" y="504" class="small muted">SUPPLIER · DEMAND / ATP</text>
   </g>

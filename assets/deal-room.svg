@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title description">
   <title id="title">Amazon and Canon agreement room</title>
-  <desc id="description">A synthetic scenario illustration of a commercial agreement between Amazon and Canon. Buyer internal, shared agreement, and supplier internal columns show demand, assortment, quantity, fixed price, funding, delivery, reservation, and approvals in proposed, accepted, and awaiting approval states. This is not a live dashboard.</desc>
+  <desc id="description">A synthetic scenario illustration of a commercial agreement between Amazon and Canon. Across a staged twelve-second sequence, agent negotiation moves from demand through assortment and quantities to funding and stock, then pauses at simulated human buyer and supplier KAM approvals. Buyer internal, shared agreement, and supplier internal columns show proposed, accepted, reserved, and awaiting approval states. This is not a live dashboard.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#101a35"/>
@@ -14,9 +14,6 @@
       <stop offset="0" stop-color="#5e7cff"/>
       <stop offset="1" stop-color="#8ba1ff"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-15%" y="-20%" width="130%" height="150%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#020611" flood-opacity=".3"/>
-    </filter>
     <style>
       text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
       .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.7px; }
@@ -27,6 +24,67 @@
       .block-title { font-size: 13px; font-weight: 650; }
       .body { font-size: 11px; }
       .micro { font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+
+      /* Twelve-second illustrative reading path: demand → assortment → quantity → resources → approvals. */
+      .stage-card { animation-duration: 12s; animation-timing-function: linear; animation-iteration-count: infinite; }
+      .stage-demand { animation-name: stage-demand; }
+      .stage-assortment { animation-name: stage-assortment; }
+      .stage-quantities { animation-name: stage-quantities; }
+      .stage-resources { animation-name: stage-resources; }
+      .stage-approvals { animation-name: stage-approvals; }
+      @keyframes stage-demand {
+        0%, 15% { fill: #202e4b; stroke: #91a5ff; stroke-width: 2.5; }
+        18%, 100% { fill: #18233b; stroke: #2b3856; stroke-width: 1; }
+      }
+      @keyframes stage-assortment {
+        0%, 17% { fill: #1b2b53; stroke: #3a579f; stroke-width: 1; }
+        19%, 32% { fill: #223663; stroke: #9aafff; stroke-width: 2.5; }
+        35%, 100% { fill: #1b2b53; stroke: #3a579f; stroke-width: 1; }
+      }
+      @keyframes stage-quantities {
+        0%, 35% { fill: #1b2b53; stroke: #3a579f; stroke-width: 1; }
+        37%, 50% { fill: #223663; stroke: #9aafff; stroke-width: 2.5; }
+        53%, 100% { fill: #1b2b53; stroke: #3a579f; stroke-width: 1; }
+      }
+      @keyframes stage-resources {
+        0%, 52% { stroke-width: 1; }
+        54%, 68% { stroke-width: 2.5; }
+        71%, 100% { stroke-width: 1; }
+      }
+      @keyframes stage-approvals {
+        0%, 70% { stroke-width: 1; }
+        73%, 96% { stroke-width: 2.5; }
+        99%, 100% { stroke-width: 1; }
+      }
+      .stage-resources.stage-buyer { animation-name: stage-resources-buyer; }
+      .stage-resources.stage-supplier { animation-name: stage-resources-supplier; }
+      @keyframes stage-resources-buyer {
+        0%, 52% { fill: #18233b; stroke: #2b3856; stroke-width: 1; }
+        54%, 68% { fill: #202e4b; stroke: #91a5ff; stroke-width: 2.5; }
+        71%, 100% { fill: #18233b; stroke: #2b3856; stroke-width: 1; }
+      }
+      @keyframes stage-resources-supplier {
+        0%, 52% { fill: #162733; stroke: #294b54; stroke-width: 1; }
+        54%, 68% { fill: #1e343d; stroke: #74dfd1; stroke-width: 2.5; }
+        71%, 100% { fill: #162733; stroke: #294b54; stroke-width: 1; }
+      }
+      .stage-approvals.stage-buyer { animation-name: stage-approval-buyer; }
+      .stage-approvals.stage-supplier { animation-name: stage-approval-supplier; }
+      @keyframes stage-approval-buyer {
+        0%, 70% { fill: #18233b; stroke: #2b3856; stroke-width: 1; }
+        73%, 96% { fill: #3b3329; stroke: #ffc777; stroke-width: 2.5; }
+        99%, 100% { fill: #18233b; stroke: #2b3856; stroke-width: 1; }
+      }
+      @keyframes stage-approval-supplier {
+        0%, 70% { fill: #162733; stroke: #294b54; stroke-width: 1; }
+        73%, 96% { fill: #3b3329; stroke: #ffc777; stroke-width: 2.5; }
+        99%, 100% { fill: #162733; stroke: #294b54; stroke-width: 1; }
+      }
+      .flow-line { animation: dash-travel 2.2s linear infinite; }
+      @keyframes dash-travel { to { stroke-dashoffset: -18; } }
+      @media (prefers-reduced-motion: reduce) {
+        .stage-card, .flow-line { animation: none !important; }
+      }
     </style>
   </defs>
 
@@ -38,7 +96,7 @@
   <g id="header">
     <text x="48" y="42" class="eyebrow" fill="#7f96d9">COMMERCIAL NETWORK  /  AGREEMENT ROOM</text>
     <text x="48" y="82" class="title" fill="#f3f6ff">Amazon <tspan fill="#718cff">↔</tspan> Canon</text>
-    <text x="48" y="108" class="subtitle" fill="#aeb9d6">A 1P camera assortment takes shape across three visibility lanes</text>
+    <text x="48" y="108" class="subtitle" fill="#aeb9d6">Agents negotiate assortment and quantities · simulated humans approve before PO release</text>
     <g transform="translate(867 39)">
       <rect width="285" height="38" rx="19" fill="#173d43" stroke="#2e787a"/>
       <circle cx="19" cy="19" r="4" fill="#55d6c5"/>
@@ -55,14 +113,14 @@
 
   <!-- Lane connectors behind cards -->
   <g id="handoff-paths" fill="none" stroke-linecap="round">
-    <path d="M386 235 C401 235 404 235 418 235" stroke="#6f8cff" stroke-width="2" stroke-dasharray="3 6" opacity=".7"/>
-    <path d="M782 235 C796 235 799 235 814 235" stroke="#55d6c5" stroke-width="2" stroke-dasharray="3 6" opacity=".7"/>
-    <path d="M386 468 C401 468 404 468 418 468" stroke="#6f8cff" stroke-width="2" stroke-dasharray="3 6" opacity=".45"/>
-    <path d="M782 468 C796 468 799 468 814 468" stroke="#55d6c5" stroke-width="2" stroke-dasharray="3 6" opacity=".45"/>
+    <path class="flow-line" d="M386 235 C401 235 404 235 418 235" stroke="#6f8cff" stroke-width="2" stroke-dasharray="3 6" opacity=".7"/>
+    <path class="flow-line" d="M782 235 C796 235 799 235 814 235" stroke="#55d6c5" stroke-width="2" stroke-dasharray="3 6" opacity=".7"/>
+    <path class="flow-line" d="M386 468 C401 468 404 468 418 468" stroke="#6f8cff" stroke-width="2" stroke-dasharray="3 6" opacity=".45"/>
+    <path class="flow-line" d="M782 468 C796 468 799 468 814 468" stroke="#55d6c5" stroke-width="2" stroke-dasharray="3 6" opacity=".45"/>
   </g>
 
   <!-- Three visibility lanes -->
-  <g id="buyer-internal" filter="url(#soft-shadow)">
+  <g id="buyer-internal">
     <rect x="48" y="180" width="338" height="394" rx="18" fill="#121b31" stroke="#283552"/>
     <rect x="48" y="180" width="338" height="4" rx="2" fill="#6f8cff"/>
     <circle cx="72" cy="211" r="5" fill="#6f8cff"/>
@@ -70,7 +128,7 @@
     <text x="72" y="239" class="column-note" fill="#8996b5">Amazon · private planning and funding</text>
 
     <g transform="translate(68 260)">
-      <rect width="298" height="91" rx="12" fill="#18233b" stroke="#2b3856"/>
+      <rect class="stage-card stage-demand" width="298" height="91" rx="12" fill="#18233b" stroke="#2b3856"/>
       <text x="16" y="25" class="block-title" fill="#edf1ff">Demand case</text>
       <text x="16" y="46" class="body" fill="#aab6d1">Forecast-backed camera need</text>
       <text x="16" y="64" class="body" fill="#aab6d1">Buyer plan · 42 units across 2 lines</text>
@@ -79,7 +137,7 @@
       <text x="232" y="27" class="micro" fill="#8de5d9">READY</text>
     </g>
     <g transform="translate(68 363)">
-      <rect width="298" height="91" rx="12" fill="#18233b" stroke="#2b3856"/>
+      <rect class="stage-card stage-resources stage-buyer" width="298" height="91" rx="12" fill="#18233b" stroke="#2b3856"/>
       <text x="16" y="25" class="block-title" fill="#edf1ff">Funding</text>
       <text x="16" y="46" class="body" fill="#aab6d1">Buyer budget held for this agreement</text>
       <text x="16" y="64" class="body" fill="#aab6d1">Private to Amazon · amount omitted</text>
@@ -88,16 +146,16 @@
       <text x="222" y="27" class="micro" fill="#8de5d9">RESERVED</text>
     </g>
     <g transform="translate(68 466)">
-      <rect width="298" height="86" rx="12" fill="#18233b" stroke="#2b3856"/>
+      <rect class="stage-card stage-approvals stage-buyer" width="298" height="86" rx="12" fill="#18233b" stroke="#2b3856"/>
       <text x="16" y="25" class="block-title" fill="#edf1ff">Purchase approval</text>
-      <text x="16" y="47" class="body" fill="#aab6d1">Human buyer review before release</text>
+      <text x="16" y="47" class="body" fill="#aab6d1">Simulated human buyer review before release</text>
       <rect x="184" y="57" width="98" height="20" rx="10" fill="#4b3b25"/>
       <circle cx="196" cy="67" r="3" fill="#f4bb68"/>
       <text x="205" y="71" class="micro" fill="#ffd38f">AWAITING</text>
     </g>
   </g>
 
-  <g id="shared-agreement" filter="url(#soft-shadow)">
+  <g id="shared-agreement">
     <rect x="418" y="180" width="364" height="394" rx="18" fill="url(#shared)" stroke="#4262bd" stroke-opacity=".72"/>
     <rect x="418" y="180" width="364" height="4" rx="2" fill="url(#cobalt)"/>
     <circle cx="442" cy="211" r="5" fill="#8ba1ff"/>
@@ -105,7 +163,7 @@
     <text x="442" y="239" class="column-note" fill="#a1b0d7">Visible to both parties · agreement v1</text>
 
     <g transform="translate(438 260)">
-      <rect width="324" height="79" rx="12" fill="#1b2b53" stroke="#3a579f"/>
+      <rect class="stage-card stage-assortment" width="324" height="79" rx="12" fill="#1b2b53" stroke="#3a579f"/>
       <text x="16" y="25" class="block-title" fill="#f0f3ff">Assortment</text>
       <text x="16" y="47" class="body" fill="#b5c2e4">EOS R50 kit + RF-S lens line</text>
       <rect x="237" y="13" width="71" height="20" rx="10" fill="#173d43"/>
@@ -113,7 +171,7 @@
       <text x="258" y="27" class="micro" fill="#8de5d9">ACCEPTED</text>
     </g>
     <g transform="translate(438 350)">
-      <rect width="324" height="79" rx="12" fill="#1b2b53" stroke="#3a579f"/>
+      <rect class="stage-card stage-quantities" width="324" height="79" rx="12" fill="#1b2b53" stroke="#3a579f"/>
       <text x="16" y="25" class="block-title" fill="#f0f3ff">Quantities</text>
       <text x="16" y="47" class="body" fill="#b5c2e4">42 units · proposed by Amazon</text>
       <rect x="227" y="13" width="81" height="20" rx="10" fill="#25335b"/>
@@ -131,7 +189,7 @@
     <text x="442" y="549" class="body" fill="#aab8db">Delivery window: AM-SEA · estimated arrival Nov 06</text>
   </g>
 
-  <g id="supplier-internal" filter="url(#soft-shadow)">
+  <g id="supplier-internal">
     <rect x="814" y="180" width="338" height="394" rx="18" fill="#121d31" stroke="#244651"/>
     <rect x="814" y="180" width="338" height="4" rx="2" fill="#55d6c5"/>
     <circle cx="838" cy="211" r="5" fill="#55d6c5"/>
@@ -139,7 +197,7 @@
     <text x="838" y="239" class="column-note" fill="#8ca8ad">Canon · private supply and account review</text>
 
     <g transform="translate(834 260)">
-      <rect width="298" height="91" rx="12" fill="#162733" stroke="#294b54"/>
+      <rect class="stage-card stage-resources stage-supplier" width="298" height="91" rx="12" fill="#162733" stroke="#294b54"/>
       <text x="16" y="25" class="block-title" fill="#edf9f6">Stock allocation</text>
       <text x="16" y="46" class="body" fill="#a8bec1">Units held against available supply</text>
       <text x="16" y="64" class="body" fill="#a8bec1">Canon inventory · private detail</text>
@@ -157,9 +215,9 @@
       <text x="232" y="27" class="micro" fill="#8de5d9">ACCEPTED</text>
     </g>
     <g transform="translate(834 466)">
-      <rect width="298" height="86" rx="12" fill="#162733" stroke="#294b54"/>
+      <rect class="stage-card stage-approvals stage-supplier" width="298" height="86" rx="12" fill="#162733" stroke="#294b54"/>
       <text x="16" y="25" class="block-title" fill="#edf9f6">Supplier KAM approval</text>
-      <text x="16" y="47" class="body" fill="#a8bec1">Canon review before PO release</text>
+      <text x="16" y="47" class="body" fill="#a8bec1">Simulated human KAM review before release</text>
       <rect x="184" y="57" width="98" height="20" rx="10" fill="#4b3b25"/>
       <circle cx="196" cy="67" r="3" fill="#f4bb68"/>
       <text x="205" y="71" class="micro" fill="#ffd38f">AWAITING</text>

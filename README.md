@@ -10,6 +10,25 @@ A portfolio case study exploring how specialized AI-agent roles can coordinate d
 
 **This repository is a public showcase. The implementation is maintained privately.** All business scenarios and data are synthetic; the project is not affiliated with the companies used as examples. It does not place real orders or process payments.
 
+## Build a system like this for your business
+
+**Ludovic Delot · Freelance AI Systems Consultant**
+
+I help businesses turn complex workflows into practical AI-assisted systems: connected data, specialist agents, human approvals and interfaces that make decisions understandable.
+
+Have teams coordinating through spreadsheets, email and disconnected dashboards? We can start with one workflow, define its decision rules and data boundaries, and build a focused prototype before expanding it.
+
+**[Discuss your project on LinkedIn](https://www.linkedin.com/in/delot/)** · **[Email me about an AI systems project](mailto:ludovicdelot99@gmail.com?subject=AI%20systems%20consulting%20project)**
+
+| Engagement | What we would work on |
+|---|---|
+| Workflow and opportunity assessment | Map actors, decisions, bottlenecks, data and approval requirements |
+| Prototype or proof of concept | Validate one useful end-to-end workflow with clear acceptance criteria |
+| Custom AI and automation systems | Connect approved data sources, tools, specialist roles and human review |
+| Decision interfaces and analytics | Make recommendations, KPIs and the evidence behind them usable by teams |
+
+A first conversation can start with your current process, who makes the decisions, where the data lives and the outcome you want to improve. Scope and feasibility depend on those constraints; the portfolio demo is not an off-the-shelf production deployment.
+
 ## The problem
 
 Buying teams must balance limited budgets, customer demand, existing inventory and supplier constraints. Brands need to meet sell-in targets and introduce new products, while retailers may refuse launches when similar products are not selling. These decisions involve several teams rather than one buyer and one seller.
@@ -31,6 +50,42 @@ flowchart LR
     L --> I[Inventory and replenishment]
     I --> D
 ```
+
+## A working simulation, with a workspace for each company
+
+This is a **functional software simulation**, not only a concept or a set of interface mockups. The private application executes procurement cycles, agent exchanges, budget allocation, stock reservations, versioned approvals, receipts and agreement replay against persisted synthetic records.
+
+Each company has its own operational perspective. Amazon's workspace focuses on ecommerce and fulfillment centers; Walmart's includes CEDIS/DC and POS/SKU replenishment; a supplier workspace focuses on its own brand, accounts, supply and commercial progress. The administrator can inspect the network across companies.
+
+That arrangement mirrors how separate teams would work with a common commercial process. In the current local demo, a role selector lets one operator explore those perspectives. Separate authenticated company accounts, production-grade tenant administration and real ERP/commerce connections would require further implementation and validation.
+
+## Real application screenshots
+
+These are captures of the running private application with synthetic data, rather than SVG mockups. They show the recorded simulation state at capture time; no real company account or customer data is included.
+
+### Network overview
+
+![Real company-network interface](assets/screenshots/network-overview.png)
+
+A company-level view of the two retailers and five suppliers. Relationship labels describe the actual recorded state, including ended agreements.
+
+### Detailed agent network
+
+![Real detailed agent-network interface](assets/screenshots/agent-network.png)
+
+Specialist roles, data products and configured permissions. Implemented and planned roles remain distinguishable.
+
+### Walmart operations
+
+![Real Walmart replenishment interface](assets/screenshots/walmart-operations.png)
+
+Distribution-center inventory and replenishment views use location/SKU records rather than one aggregate stock figure.
+
+### Agreement audit and exceptions
+
+![Real Amazon–Canon agreement interface showing a cancelled agreement](assets/screenshots/deal-room.png)
+
+The captured agreement is cancelled. The interface retains the decision blocks, rejected commitments and internal exchanges so the operator can inspect an exception rather than losing its history.
 
 ## Product experience
 
@@ -237,3 +292,25 @@ Commercial systems thinking; translation of organizational processes into softwa
 ## Source availability
 
 This public repository contains only the case study and presentation assets. It does not provide application source, executable backend logic, database extracts, internal development contracts, credentials or private repository history. The diagrams communicate the design without exposing the implementation.
+
+## From agent-to-agent to human-to-agent
+
+The same commercial workflow could be adapted so that **one side of a negotiation is operated by a human**. For example, a buyer could review and submit an assortment or quantity proposal while supplier agents respond; a supplier KAM could negotiate with retailer agents; or both companies could use human review for selected decisions.
+
+The existing typed messages, document versions, scoped evidence and approval checks provide useful foundations for that adaptation. A human-facing negotiation screen would need to submit validated proposals through those same rules, preserve the sender's identity, handle competing edits and record every decision.
+
+**Current capability:** simulated buyer/KAM approval queues and operator controls already exist. **Proposed extension:** a person taking over the live commercial negotiation role is not yet implemented. Its effort depends on identity, authorization, UI and integration requirements; it should not be described as a switch that is already available.
+
+This flexibility is part of the consulting approach: decide where autonomy is useful and where people should retain control, then implement the workflow around that boundary.
+
+---
+
+## Let's design the right workflow for your company
+
+You do not need seven companies or sixty agents to start. A useful first project might connect a demand forecast to a buying recommendation, an account manager to approval-ready proposals, or a stock exception to a clear recovery action.
+
+**Tell me which workflow you want to improve.**
+
+[**Contact Ludovic on LinkedIn**](https://www.linkedin.com/in/delot/) · [**Start a project conversation by email**](mailto:ludovicdelot99@gmail.com?subject=AI%20systems%20consulting%20project)
+
+Freelance AI systems consulting · Workflow automation · Data and decision systems
